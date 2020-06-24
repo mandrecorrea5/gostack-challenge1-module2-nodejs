@@ -24,7 +24,7 @@ class CreateTransactionService {
     const balance = this.transactionsRepository.getBalance();
 
     if (balance.total < 0) {
-      throw Error('Não é possível retirar um valor maior que o total');
+      throw Error('Impossible outcome greater than total');
     }
 
     return repository;
